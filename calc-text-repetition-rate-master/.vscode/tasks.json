@@ -1,0 +1,109 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "group": "test",
+            "label": "calc: orig_0.8_add.txt",
+            "type": "shell",
+            "command": "cd calc-text-repetition-rate && python main.py ../test-cases/orig.txt ../test-cases/orig_0.8_add.txt ../test-cases/orig_0.8_add_answer.txt"
+        },
+        {
+            "group": "test",
+            "label": "calc & analyse: orig_0.8_add.txt",
+            "type": "shell",
+            "command": "cd calc-text-repetition-rate && python -m cProfile -o ../test-cases/orig_0.8_add_analysis.out -s tottime main.py ../test-cases/orig.txt ../test-cases/orig_0.8_add.txt ../test-cases/orig_0.8_add_answer.txt"
+        },
+        {
+            "group": "test",
+            "label": "graph: orig_0.8_add_analysis.out",
+            "type": "shell",
+            "command": "cd analysis && python gprof2dot.py -f pstats ../test-cases/orig_0.8_add_analysis.out | dot -Tpng -o ../test-cases/orig_0.8_add_analysis.png"
+        },
+        {
+            "group": "test",
+            "label": "calc & analyse: orig_0.8_add.txt",
+            "type": "shell",
+            "command": "cd calc-text-repetition-rate && python -m cProfile -o ../test-cases/orig_0.8_add_analysis.out -s tottime main.py ../test-cases/orig.txt ../test-cases/orig_0.8_add.txt ../test-cases/orig_0.8_add_answer.txt"
+        },
+        {
+            "group": "test",
+            "label": "calc: orig_0.8_del.txt",
+            "type": "shell",
+            "command": "cd calc-text-repetition-rate && python main.py ../test-cases/orig.txt ../test-cases/orig_0.8_del.txt ../test-cases/orig_0.8_del_answer.txt"
+        },
+        {
+            "group": "test",
+            "label": "graph: orig_0.8_del_analysis.out",
+            "type": "shell",
+            "command": "cd analysis && python gprof2dot.py -f pstats ../test-cases/orig_0.8_del_analysis.out | dot -Tpng -o ../test-cases/orig_0.8_del_analysis.png"
+        },
+        {
+            "group": "test",
+            "label": "calc & analyse: orig_0.8_del.txt",
+            "type": "shell",
+            "command": "cd calc-text-repetition-rate && python -m cProfile -o ../test-cases/orig_0.8_del_analysis.out -s tottime main.py ../test-cases/orig.txt ../test-cases/orig_0.8_del.txt ../test-cases/orig_0.8_del_answer.txt"
+        },
+        {
+            "group": "test",
+            "label": "calc: orig_0.8_dis_1.txt",
+            "type": "shell",
+            "command": "cd calc-text-repetition-rate && python main.py ../test-cases/orig.txt ../test-cases/orig_0.8_dis_1.txt ../test-cases/orig_0.8_dis_1_answer.txt"
+        },
+        {
+            "group": "test",
+            "label": "calc & analyse: orig_0.8_dis_1.txt",
+            "type": "shell",
+            "command": "cd calc-text-repetition-rate && python -m cProfile -o ../test-cases/orig_0.8_dis_1_analysis.out -s tottime main.py ../test-cases/orig.txt ../test-cases/orig_0.8_dis_1.txt ../test-cases/orig_0.8_dis_1_answer.txt"
+        },
+        {
+            "group": "test",
+            "label": "graph: orig_0.8_dis_1_analysis.out",
+            "type": "shell",
+            "command": "cd analysis && python gprof2dot.py -f pstats ../test-cases/orig_0.8_dis_1_analysis.out | dot -Tpng -o ../test-cases/orig_0.8_dis_1_analysis.png"
+        },
+        {
+            "group": "test",
+            "label": "calc: orig_0.8_dis_10.txt",
+            "type": "shell",
+            "command": "cd calc-text-repetition-rate && python main.py ../test-cases/orig.txt ../test-cases/orig_0.8_dis_10.txt ../test-cases/orig_0.8_dis_10_answer.txt"
+        },
+        {
+            "group": "test",
+            "label": "calc & analyse: orig_0.8_dis_10.txt",
+            "type": "shell",
+            "command": "cd calc-text-repetition-rate && python -m cProfile -o ../test-cases/orig_0.8_dis_10_analysis.out -s tottime main.py ../test-cases/orig.txt ../test-cases/orig_0.8_dis_10.txt ../test-cases/orig_0.8_dis_10_answer.txt"
+        },
+        {
+            "group": "test",
+            "label": "graph: orig_0.8_dis_10_analysis.out",
+            "type": "shell",
+            "command": "cd analysis && python gprof2dot.py -f pstats ../test-cases/orig_0.8_dis_10_analysis.out | dot -Tpng -o ../test-cases/orig_0.8_dis_10_analysis.png"
+        },
+        {
+            "group": "test",
+            "label": "calc: orig_0.8_dis_15.txt",
+            "type": "shell",
+            "command": "cd calc-text-repetition-rate && python main.py ../test-cases/orig.txt ../test-cases/orig_0.8_dis_15.txt ../test-cases/orig_0.8_dis_15_answer.txt"
+        },
+        {
+            "group": "test",
+            "label": "calc & analyse: orig_0.8_dis_15.txt",
+            "type": "shell",
+            "command": "cd calc-text-repetition-rate && python -m cProfile -o ../test-cases/orig_0.8_dis_15_analysis.out -s tottime main.py ../test-cases/orig.txt ../test-cases/orig_0.8_dis_15.txt ../test-cases/orig_0.8_dis_15_answer.txt"
+        },
+        {
+            "group": "test",
+            "label": "graph: orig_0.8_dis_15_analysis.out",
+            "type": "shell",
+            "command": "cd analysis && python gprof2dot.py -f pstats ../test-cases/orig_0.8_dis_15_analysis.out | dot -Tpng -o ../test-cases/orig_0.8_dis_15_analysis.png"
+        },
+        {
+            "group": "test",
+            "label": "unit test",
+            "type": "shell",
+            "command": "cd calc-text-repetition-rate/test && python test_matrix.py"
+        }
+    ]
+}

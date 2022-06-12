@@ -1,0 +1,12 @@
+,Raw MT output,Baseline APE,Batch Updated APE,Online Updated APE
+train_loss,0,0.18,0.12,1.75
+epochs,0,24,12,3
+BLEU score,0.67,0.43,0.3,0.3
+TER score,0.24,0.66,0.61,0.81
+Modified sentences (%),N/A,93.47,96.07,98.11
+Improved sentences (%),N/A,7.78,2.83,3.07
+Deteriorated sentences (%),N/A,80.74,88.99,92.37
+Mean insertions,N/A,7,8,9
+Mean deletions,N/A,14,11,17
+Mean substitutions,N/A,6,6,7
+Precision,N/A,8.33,2.95,3.12

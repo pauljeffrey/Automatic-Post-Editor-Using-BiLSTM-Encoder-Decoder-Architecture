@@ -1,0 +1,24 @@
+{
+    "cases": [
+        {
+            "org_str": "今天是星期天",
+            "cmp_str": "今天是周天",
+            "expected": 3
+        },
+        {
+            "org_str": "天气晴",
+            "cmp_str": "天气晴朗",
+            "expected": 3
+        },
+        {
+            "org_str": "今天晚上我要去看电影",
+            "cmp_str": "我晚上要去看电影",
+            "expected": 7
+        },
+        {
+            "org_str": "delicate",
+            "cmp_str": "dedicate",
+            "expected": 7
+        }
+    ]
+}
